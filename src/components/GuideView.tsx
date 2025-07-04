@@ -37,16 +37,16 @@ export default function GuideView({ onBack }: GuideViewProps) {
         'Navegue com as setas ou role a página conforme preferir'
       ]
     },
-    {
-      icon: Layers,
-      title: 'Comparação de Estruturas',
-      description: 'Compare duas estruturas lado a lado para identificar diferenças.',
-      steps: [
-        'Selecione duas estruturas nos menus dropdown',
-        'Visualize as imagens lado a lado',
-        'Leia a análise comparativa gerada automaticamente'
-      ]
-    },
+//    {
+//     icon: Layers,
+//      title: 'Comparação de Estruturas',
+//      description: 'Compare duas estruturas lado a lado para identificar diferenças.',
+//      steps: [
+//        'Selecione duas estruturas nos menus dropdown',
+//        'Visualize as imagens lado a lado',
+//        'Leia a análise comparativa gerada automaticamente'
+//      ]
+//    },
     {
       icon: Search,
       title: 'Busca Inteligente',
@@ -110,7 +110,6 @@ export default function GuideView({ onBack }: GuideViewProps) {
       <div className="mt-12 bg-amber-50 border border-amber-200 rounded-xl p-6">
         <h3 className="text-lg font-semibold text-amber-800 mb-2">Dicas Importantes</h3>
         <ul className="text-amber-700 space-y-1">
-          <li>• Use o modo de comparação para estudar diferenças entre tecidos normais e patológicos</li>
           <li>• Explore todas as legendas interativas para compreender completamente cada estrutura</li>
           <li>• Consulte o glossário sempre que encontrar termos desconhecidos</li>
           <li>• O conteúdo é constantemente atualizado - verifique periodicamente por novos temas</li>

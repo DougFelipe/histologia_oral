@@ -2,6 +2,9 @@ import { Theme, GlossaryTerm, TeamMember } from '../types';
 import { palatoTheme } from '../themes/palato/data';
 import { linguaTheme } from '../themes/lingua/data';
 import { cementoTheme } from '../themes/cemento/data';
+import logo from '../data/LOGO.png'; // ajuste o caminho conforme a localização do arquivo
+
+
 
 // Temas completos implementados
 const implementedThemes = [palatoTheme, linguaTheme, cementoTheme];
@@ -12,7 +15,7 @@ const developmentThemes: Theme[] = [
     id: 'gengiva',
     name: 'Gengiva',
     status: 'development',
-    image: 'https://images.pexels.com/photos/4386322/pexels-photo-4386322.jpeg?auto=compress&cs=tinysrgb&w=400',
+    image: logo,
     description: 'Tecido gengival queratinizado com características específicas de proteção.',
     category: 'Tecido Mole',
     subtopics: []
@@ -21,7 +24,7 @@ const developmentThemes: Theme[] = [
     id: 'dentina',
     name: 'Dentina',
     status: 'development',
-    image: 'https://images.pexels.com/photos/4386445/pexels-photo-4386445.jpeg?auto=compress&cs=tinysrgb&w=400',
+    image: logo,
     description: 'Tecido mineralizado que forma o corpo do dente com túbulos dentinários.',
     category: 'Tecido Duro',
     subtopics: []
@@ -30,7 +33,7 @@ const developmentThemes: Theme[] = [
     id: 'esmalte',
     name: 'Esmalte',
     status: 'development',
-    image: 'https://images.pexels.com/photos/4386448/pexels-photo-4386448.jpeg?auto=compress&cs=tinysrgb&w=400',
+    image: logo,
     description: 'Tecido mais mineralizado do corpo humano, formado por prismas de esmalte.',
     category: 'Tecido Duro',
     subtopics: []
@@ -39,7 +42,7 @@ const developmentThemes: Theme[] = [
     id: 'polpa-dentaria',
     name: 'Polpa Dentária',
     status: 'development',
-    image: 'https://images.pexels.com/photos/4386441/pexels-photo-4386441.jpeg?auto=compress&cs=tinysrgb&w=400',
+    image: logo,
     description: 'Tecido conjuntivo frouxo altamente vascularizado e inervado.',
     category: 'Tecido Mole',
     subtopics: []
@@ -48,7 +51,7 @@ const developmentThemes: Theme[] = [
     id: 'ligamento-periodontal',
     name: 'Ligamento Periodontal',
     status: 'development',
-    image: 'https://images.pexels.com/photos/4386317/pexels-photo-4386317.jpeg?auto=compress&cs=tinysrgb&w=400',
+    image: logo,
     description: 'Tecido conjuntivo que une o cemento radicular ao osso alveolar.',
     category: 'Tecido Mole',
     subtopics: []
@@ -57,7 +60,7 @@ const developmentThemes: Theme[] = [
     id: 'osso-alveolar',
     name: 'Osso Alveolar',
     status: 'development',
-    image: 'https://images.pexels.com/photos/4386368/pexels-photo-4386368.jpeg?auto=compress&cs=tinysrgb&w=400',
+    image: logo,
     description: 'Tecido ósseo especializado que suporta e ancora os dentes.',
     category: 'Tecido Duro',
     subtopics: []
@@ -66,7 +69,7 @@ const developmentThemes: Theme[] = [
     id: 'mucosa-bucal',
     name: 'Mucosa Bucal',
     status: 'development',
-    image: 'https://images.pexels.com/photos/4386355/pexels-photo-4386355.jpeg?auto=compress&cs=tinysrgb&w=400',
+    image: logo,
     description: 'Mucosa de revestimento da cavidade oral com características específicas.',
     category: 'Tecido Mole',
     subtopics: []
@@ -75,7 +78,7 @@ const developmentThemes: Theme[] = [
     id: 'glandulas-salivares',
     name: 'Glândulas Salivares',
     status: 'development',
-    image: 'https://images.pexels.com/photos/4386324/pexels-photo-4386324.jpeg?auto=compress&cs=tinysrgb&w=400',
+    image: logo,
     description: 'Glândulas exócrinas produtoras de saliva com diferentes tipos secretores.',
     category: 'Tecido Mole',
     subtopics: []
@@ -84,7 +87,7 @@ const developmentThemes: Theme[] = [
     id: 'periodonto',
     name: 'Periodonto',
     status: 'development',
-    image: 'https://images.pexels.com/photos/4386361/pexels-photo-4386361.jpeg?auto=compress&cs=tinysrgb&w=400',
+    image: logo,
     description: 'Conjunto integrado de tecidos de suporte e sustentação do dente.',
     category: 'Tecido Mole',
     subtopics: []

@@ -1,18 +1,19 @@
 import { Theme } from '../../types';
+import logo from '../../data/LOGO.png';
 
 export const palatoTheme: Theme = {
   id: 'palato',
   name: 'Palato',
   status: 'complete',
-  image: 'https://images.pexels.com/photos/4386477/pexels-photo-4386477.jpeg?auto=compress&cs=tinysrgb&w=400',
+  image: logo,
   description: 'Tecido epitelial do palato duro com camadas bem definidas e estruturas especializadas.',
   category: 'Tecido Mole',
   subtopics: [
     {
       id: 'epitelio-estratificado',
       title: 'Epitélio Estratificado Pavimentoso Queratinizado',
-      content: 'O epitélio estratificado pavimentoso queratinizado do palato duro é constituído por múltiplas camadas celulares que conferem proteção mecânica à cavidade oral. As células basais são cuboidais e apresentam intensa atividade mitótica, sendo responsáveis pela renovação constante do epitélio. A camada espinhosa apresenta células poligonais unidas por desmossomas, conferindo resistência mecânica. A camada granulosa contém grânulos de querato-hialina, precursores da queratina. A camada córnea superficial é composta por células mortas queratinizadas que descamam continuamente.',
-      image: 'https://images.pexels.com/photos/3938023/pexels-photo-3938023.jpeg?auto=compress&cs=tinysrgb&w=600',
+      content: 'O epitélio estratificado pavimentoso queratinizado do palato duro é constituído por múltiplas camadas celulares que conferem proteção mecânica à cavidade oral. [...]',
+      image: logo,
       structures: [
         {
           id: 'camada-basal',
@@ -51,8 +52,8 @@ export const palatoTheme: Theme = {
     {
       id: 'lamina-propria',
       title: 'Lâmina Própria',
-      content: 'A lâmina própria do palato é constituída por tecido conjuntivo denso não modelado, rico em fibras colágenas tipo I e fibras elásticas. Esta camada apresenta duas regiões distintas: a região papilar (superficial), que se projeta no epitélio formando as papilas conjuntivas, e a região reticular (profunda), mais densa e organizada. A lâmina própria contém vasos sanguíneos, vasos linfáticos, terminações nervosas e células do sistema imunológico. As papilas conjuntivas aumentam a superfície de contato entre epitélio e conjuntivo, facilitando a nutrição epitelial.',
-      image: 'https://images.pexels.com/photos/4386330/pexels-photo-4386330.jpeg?auto=compress&cs=tinysrgb&w=600',
+      content: 'A lâmina própria do palato é constituída por tecido conjuntivo denso não modelado [...]',
+      image: logo,
       structures: [
         {
           id: 'regiao-papilar',
@@ -75,8 +76,8 @@ export const palatoTheme: Theme = {
     {
       id: 'glandulas-palatinas',
       title: 'Glândulas Palatinas',
-      content: 'As glândulas palatinas são glândulas exócrinas tubuloacinares compostas, predominantemente mucosas, localizadas na submucosa do palato duro e mole. Estas glândulas secretam mucina, uma glicoproteína que forma o muco, essencial para a lubrificação e proteção da mucosa oral. Os ácinos são compostos por células mucosas com citoplasma claro e núcleo basal achatado. Os ductos excretores são revestidos por epitélio estratificado e se abrem na superfície da mucosa palatina. A secreção é controlada pelo sistema nervoso autônomo parassimpático.',
-      image: 'https://images.pexels.com/photos/4386435/pexels-photo-4386435.jpeg?auto=compress&cs=tinysrgb&w=600',
+      content: 'As glândulas palatinas são glândulas exócrinas tubuloacinares compostas, [...]',
+      image: logo,
       structures: [
         {
           id: 'acinos-mucosos',

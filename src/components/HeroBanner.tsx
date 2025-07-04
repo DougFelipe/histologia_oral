@@ -14,51 +14,53 @@ export default function HeroBanner({ onNavigate }: HeroBannerProps) {
   ];
 
   return (
-    <div className="relative bg-gradient-to-br from-red-900 via-red-800 to-red-900 text-white overflow-hidden">
-      <div className="absolute inset-0 bg-black opacity-20"></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-amber-800/20 to-transparent"></div>
-      
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-        <div className="text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-            Atlas Virtual de
-            <span className="block text-amber-200">Histologia Oral</span>
-          </h1>
-          
-          <p className="text-xl sm:text-2xl text-amber-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Explore estruturas histológicas da cavidade oral com imagens de alta qualidade, 
-            legendas interativas e comparações detalhadas para o aprendizado médico.
-          </p>
+    <div className="relative bg-white text-red-900 overflow-hidden">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-2 pb-16">
+        <div className="flex flex-col items-center text-center">
 
+          {/* Imagem do Atlas no topo */}
+          <img
+            src="/src/data/LOGO.png"
+            alt="Logo do Atlas"
+            className="w-36 sm:w-44 lg:w-52 h-auto drop-shadow-md"
+          />
+
+          {/* Título limpo e direto, sem efeitos */}
+          <h1 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-bold text-red-800 tracking-tight">
+            Atlas Virtual de Histologia Oral
+          </h1>
+
+          {/* Blocos de estatísticas */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
             {stats.map((stat, index) => {
               const Icon = stat.icon;
               return (
-                <div key={index} className="text-center p-4 bg-white/10 rounded-lg backdrop-blur-sm">
-                  <Icon className="h-8 w-8 text-amber-200 mx-auto mb-2" />
-                  <div className="text-2xl font-bold text-white">{stat.value}</div>
-                  <div className="text-sm text-amber-100">{stat.label}</div>
+                <div key={index} className="text-center p-4 bg-red-100/20 rounded-lg border border-red-100 shadow-sm">
+                  <Icon className="h-8 w-8 text-red-800 mx-auto mb-2" />
+                  <div className="text-2xl font-bold text-red-900">{stat.value}</div>
+                  <div className="text-sm text-rose-800">{stat.label}</div>
                 </div>
               );
             })}
           </div>
 
+          {/* Botões de ação */}
           <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
-            <button 
+            <button
               onClick={() => {
                 const themesSection = document.getElementById('themes-section');
                 if (themesSection) {
                   themesSection.scrollIntoView({ behavior: 'smooth' });
                 }
               }}
-              className="px-8 py-3 bg-white text-amber-800 font-semibold rounded-lg hover:bg-amber-50 transition-colors shadow-lg flex items-center justify-center"
+              className="px-8 py-3 bg-red-800 text-white font-semibold rounded-lg hover:bg-red-900 transition-colors shadow-lg flex items-center justify-center"
             >
               <Play className="h-4 w-4 mr-2" />
               Começar Exploração
             </button>
-            <button 
+            <button
               onClick={() => onNavigate('guide')}
-              className="px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-amber-800 transition-colors flex items-center justify-center"
+              className="px-8 py-3 border-2 border-red-800 text-red-800 font-semibold rounded-lg hover:bg-red-800 hover:text-white transition-colors flex items-center justify-center"
             >
               <ArrowRight className="h-4 w-4 mr-2" />
               Modo de Usar

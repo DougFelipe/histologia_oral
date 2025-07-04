@@ -10,16 +10,13 @@ interface HeaderProps {
 }
 
 export default function Header({ currentView, onViewChange, searchTerm, onSearchChange }: HeaderProps) {
-  // Check if CMS is enabled via environment variable
   const isCMSEnabled = import.meta.env.VITE_ENABLE_CMS === 'true';
 
   const navItems = [
-    { id: 'grid', label: 'Início', icon: Globe },
     { id: 'guide', label: 'Modo de Usar', icon: HelpCircle },
     { id: 'glossary', label: 'Glossário', icon: Book },
     { id: 'team', label: 'Equipe', icon: Users },
     { id: 'sitemap', label: 'Mapa do Site', icon: Map },
-    // Only include CMS if enabled in environment
     ...(isCMSEnabled ? [{ id: 'cms', label: 'CMS', icon: Settings }] : []),
   ];
 
@@ -27,23 +24,24 @@ export default function Header({ currentView, onViewChange, searchTerm, onSearch
     <header className="sticky top-0 z-50 bg-white shadow-lg border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <div className="flex items-center">
-            <button 
-              onClick={() => onViewChange('grid')}
-              className="flex-shrink-0 flex items-center hover:opacity-80 transition-opacity"
-            >
-              <div className="w-10 h-10 bg-amber-800 rounded-lg flex items-center justify-center">
-                <Menu className="h-6 w-6 text-white" />
-              </div>
-              <div className="ml-3 hidden sm:block">
-                <h1 className="text-xl font-bold text-gray-900">Atlas Virtual</h1>
-                <p className="text-xs text-gray-600">Histologia Oral</p>
-              </div>
-            </button>
-          </div>
+          
+          {/* Logo com nome (visível sempre) */}
+          <button
+            onClick={() => onViewChange('grid')}
+            className="flex items-center space-x-3 hover:opacity-90 transition-opacity"
+          >
+            <img
+              src="/src/data/LOGO.png"
+              alt="Logo do Atlas"
+              className="w-10 h-10 object-contain"
+            />
+            <div className="hidden sm:block">
+              <h1 className="text-xl font-bold text-red-800 leading-none">Atlas Virtual</h1>
+              <p className="text-xs text-red-800 leading-none">Histologia Oral</p>
+            </div>
+          </button>
 
-          {/* Navigation */}
+          {/* Navegação (apenas no desktop) */}
           <nav className="hidden md:flex space-x-8">
             {navItems.map((item) => {
               const Icon = item.icon;
@@ -59,7 +57,6 @@ export default function Header({ currentView, onViewChange, searchTerm, onSearch
                 >
                   <Icon className="h-4 w-4" />
                   <span>{item.label}</span>
-                  {/* Development indicator for CMS */}
                   {item.id === 'cms' && (
                     <span className="ml-1 px-1.5 py-0.5 text-xs bg-yellow-100 text-yellow-800 rounded-full">
                       DEV
@@ -70,7 +67,7 @@ export default function Header({ currentView, onViewChange, searchTerm, onSearch
             })}
           </nav>
 
-          {/* Search */}
+          {/* Barra de busca */}
           <div className="flex items-center">
             {currentView === 'grid' && (
               <div className="relative">
@@ -89,7 +86,7 @@ export default function Header({ currentView, onViewChange, searchTerm, onSearch
             )}
           </div>
 
-          {/* Mobile menu button */}
+          {/* Menu hambúrguer (somente mobile) */}
           <div className="md:hidden">
             <button
               type="button"
@@ -102,7 +99,7 @@ export default function Header({ currentView, onViewChange, searchTerm, onSearch
         </div>
       </div>
 
-      {/* Development Environment Warning */}
+      {/* Aviso de desenvolvimento */}
       {isCMSEnabled && import.meta.env.DEV && (
         <div className="bg-yellow-50 border-b border-yellow-200 px-4 py-2">
           <div className="max-w-7xl mx-auto">

@@ -94,14 +94,14 @@ export default function TeamView({ members, onBack }: TeamViewProps) {
         </section>
 
         <section className="mt-12 bg-amber-50 border border-amber-200 rounded-xl p-6">
-          <h2 className="text-lg font-semibold text-amber-800 mb-2">Colaboração Interdisciplinar</h2>
+          <h2 className="text-lg font-semibold text-amber-800 mb-2">Sobre a Equipe</h2>
           <p className="text-amber-700 leading-relaxed">
-            Este projeto é resultado da colaboração entre profissionais de diferentes áreas, 
-            unindo conhecimento científico em histologia oral com expertise em tecnologia educacional. 
-            Nossa equipe multidisciplinar garante que o conteúdo seja cientificamente preciso, 
-            pedagogicamente efetivo e tecnologicamente avançado.
+            Este projeto surgiu como uma iniciativa de extensão universitária vinculada à Universidade Federal do Rio Grande do Norte (UFRN), 
+            reunindo docentes, discentes e profissionais das áreas de Histologia, Odontologia, Biomedicina e Engenharia de Software. 
+            A proposta visa integrar conhecimento científico com recursos interativos, promovendo um ambiente de aprendizagem acessível e de alta qualidade. 
           </p>
         </section>
+
 
         <section className="mt-8 text-center">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
