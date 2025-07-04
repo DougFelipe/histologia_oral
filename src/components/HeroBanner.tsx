@@ -1,5 +1,6 @@
 import React from 'react';
 import { BookOpen, Image, Users, Award, ArrowRight, Play } from 'lucide-react';
+import logo from '../data/LOGO.png'; // ✅ Caminho relativo correto
 
 interface HeroBannerProps {
   onNavigate: (view: string) => void;
@@ -18,19 +19,19 @@ export default function HeroBanner({ onNavigate }: HeroBannerProps) {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-2 pb-16">
         <div className="flex flex-col items-center text-center">
 
-          {/* Imagem do Atlas no topo */}
+          {/* ✅ Imagem do Atlas (logo) acima do título */}
           <img
-            src="/src/data/LOGO.png"
+            src={logo}
             alt="Logo do Atlas"
             className="w-36 sm:w-44 lg:w-52 h-auto drop-shadow-md"
           />
 
-          {/* Título limpo e direto, sem efeitos */}
-          <h1 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-bold text-red-800 tracking-tight">
+          {/* ✅ Título centralizado e elegante */}
+          <h1 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-bold text-red-800 tracking-tight drop-shadow-sm">
             Atlas Virtual de Histologia Oral
           </h1>
 
-          {/* Blocos de estatísticas */}
+          {/* ✅ Estatísticas do projeto */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
             {stats.map((stat, index) => {
               const Icon = stat.icon;
@@ -44,7 +45,7 @@ export default function HeroBanner({ onNavigate }: HeroBannerProps) {
             })}
           </div>
 
-          {/* Botões de ação */}
+          {/* ✅ Botões de ação */}
           <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={() => {

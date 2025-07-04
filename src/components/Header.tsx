@@ -1,5 +1,17 @@
 import React from 'react';
-import { Search, Menu, Book, HelpCircle, Globe, Users, Settings, Map } from 'lucide-react';
+import {
+  Search,
+  Menu,
+  Book,
+  HelpCircle,
+  Globe,
+  Users,
+  Settings,
+  Map
+} from 'lucide-react';
+
+import logo from '../data/LOGO.png'; // ✅ Caminho relativo correto
+
 import { ViewMode } from '../types';
 
 interface HeaderProps {
@@ -9,7 +21,12 @@ interface HeaderProps {
   onSearchChange: (term: string) => void;
 }
 
-export default function Header({ currentView, onViewChange, searchTerm, onSearchChange }: HeaderProps) {
+export default function Header({
+  currentView,
+  onViewChange,
+  searchTerm,
+  onSearchChange
+}: HeaderProps) {
   const isCMSEnabled = import.meta.env.VITE_ENABLE_CMS === 'true';
 
   const navItems = [
@@ -17,21 +34,21 @@ export default function Header({ currentView, onViewChange, searchTerm, onSearch
     { id: 'glossary', label: 'Glossário', icon: Book },
     { id: 'team', label: 'Equipe', icon: Users },
     { id: 'sitemap', label: 'Mapa do Site', icon: Map },
-    ...(isCMSEnabled ? [{ id: 'cms', label: 'CMS', icon: Settings }] : []),
+    ...(isCMSEnabled ? [{ id: 'cms', label: 'CMS', icon: Settings }] : [])
   ];
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-lg border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          
-          {/* Logo com nome (visível sempre) */}
+
+          {/* ✅ Logo com nome ajustado */}
           <button
             onClick={() => onViewChange('grid')}
             className="flex items-center space-x-3 hover:opacity-90 transition-opacity"
           >
             <img
-              src="/src/data/LOGO.png"
+              src={logo}
               alt="Logo do Atlas"
               className="w-10 h-10 object-contain"
             />
@@ -41,7 +58,7 @@ export default function Header({ currentView, onViewChange, searchTerm, onSearch
             </div>
           </button>
 
-          {/* Navegação (apenas no desktop) */}
+          {/* Navegação (desktop) */}
           <nav className="hidden md:flex space-x-8">
             {navItems.map((item) => {
               const Icon = item.icon;
@@ -67,7 +84,7 @@ export default function Header({ currentView, onViewChange, searchTerm, onSearch
             })}
           </nav>
 
-          {/* Barra de busca */}
+          {/* Campo de busca */}
           <div className="flex items-center">
             {currentView === 'grid' && (
               <div className="relative">
@@ -78,7 +95,7 @@ export default function Header({ currentView, onViewChange, searchTerm, onSearch
                   type="text"
                   value={searchTerm}
                   onChange={(e) => onSearchChange(e.target.value)}
-                  className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-1 focus:ring-amber-500 focus:border-amber-500 sm:text-sm"
+                  className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-amber-500 focus:border-amber-500 sm:text-sm"
                   placeholder="Buscar estruturas..."
                   aria-label="Buscar estruturas histológicas"
                 />
@@ -86,7 +103,7 @@ export default function Header({ currentView, onViewChange, searchTerm, onSearch
             )}
           </div>
 
-          {/* Menu hambúrguer (somente mobile) */}
+          {/* Menu hambúrguer (mobile) */}
           <div className="md:hidden">
             <button
               type="button"
@@ -104,7 +121,7 @@ export default function Header({ currentView, onViewChange, searchTerm, onSearch
         <div className="bg-yellow-50 border-b border-yellow-200 px-4 py-2">
           <div className="max-w-7xl mx-auto">
             <p className="text-sm text-yellow-800">
-              <strong>Modo Desenvolvimento:</strong> CMS administrativo ativo. 
+              <strong>Modo Desenvolvimento:</strong> CMS administrativo ativo.
               Este painel não estará disponível em produção.
             </p>
           </div>

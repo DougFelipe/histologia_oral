@@ -13,6 +13,8 @@ import SEOHead from './components/SEOHead';
 import { cmsService } from './services/cmsService';
 import { ViewMode, FilterCategory, Theme, GlossaryTerm, TeamMember } from './types';
 import { Settings } from 'lucide-react';
+import logo from '../../data/LOGO.png';
+
 
 function App() {
   const [currentView, setCurrentView] = useState<ViewMode>('grid');
