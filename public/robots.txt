@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+Allow: /themes/*
+Allow: /glossary
+Allow: /team
+Allow: /guide
+Allow: /sitemap
+
+# Block CMS from search engines
+Disallow: /cms
+Disallow: /cms/*
+
+# Block development files
+Disallow: /*.json
+Disallow: /src/*
+Disallow: /node_modules/*
+
+# Sitemap location
+Sitemap: https://atlas-histologia-oral.com/sitemap.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1
