@@ -34,7 +34,7 @@ export default function InteractiveLegend({ image, structures, imageAlt = "Image
           </button>
         </div>
         
-        {/* Interactive markers */}
+        {/* Interactive markers 
         {structures.map((structure) => (
           <button
             key={structure.id}
@@ -47,7 +47,7 @@ export default function InteractiveLegend({ image, structures, imageAlt = "Image
             title={structure.name}
             aria-label={`Estrutura: ${structure.name} - ${structure.description}`}
           />
-        ))}
+        ))}*/}
         
         {/* Overlay for selected structure */}
         {selectedStructure && (
@@ -73,7 +73,7 @@ export default function InteractiveLegend({ image, structures, imageAlt = "Image
         )}
       </div>
       
-      {/* Legend list */}
+      {/* Legend list 
       {structures.length > 0 && (
         <div className="mt-4 p-4 bg-gray-50 rounded-lg">
           <h4 className="text-sm font-medium text-gray-900 mb-2">Estruturas Identificadas:</h4>
@@ -92,7 +92,7 @@ export default function InteractiveLegend({ image, structures, imageAlt = "Image
             ))}
           </ul>
         </div>
-      )}
+      )}*/}
 
       {/* Zoom Modal */}
       <ImageZoomModal

@@ -2,24 +2,16 @@ import { Theme, GlossaryTerm, TeamMember } from '../types';
 import { palatoTheme } from '../themes/palato/data';
 import { linguaTheme } from '../themes/lingua/data';
 import { cementoTheme } from '../themes/cemento/data';
+import { polpaDentinaTheme } from '../themes/polpa-dentina/data';  
 import logo from '../data/LOGO.png'; // ajuste o caminho conforme a localização do arquivo
 
 
 
 // Temas completos implementados
-const implementedThemes = [palatoTheme, linguaTheme, cementoTheme];
+const implementedThemes = [palatoTheme, linguaTheme, cementoTheme, polpaDentinaTheme];
 
 // Temas em desenvolvimento (placeholders)
 const developmentThemes: Theme[] = [
-  {
-    id: 'gengiva',
-    name: 'Gengiva',
-    status: 'development',
-    image: logo,
-    description: 'Tecido gengival queratinizado com características específicas de proteção.',
-    category: 'Tecido Mole',
-    subtopics: []
-  },
   {
     id: 'dentina',
     name: 'Dentina',
@@ -36,15 +28,6 @@ const developmentThemes: Theme[] = [
     image: logo,
     description: 'Tecido mais mineralizado do corpo humano, formado por prismas de esmalte.',
     category: 'Tecido Duro',
-    subtopics: []
-  },
-  {
-    id: 'polpa-dentaria',
-    name: 'Polpa Dentária',
-    status: 'development',
-    image: logo,
-    description: 'Tecido conjuntivo frouxo altamente vascularizado e inervado.',
-    category: 'Tecido Mole',
     subtopics: []
   },
   {
